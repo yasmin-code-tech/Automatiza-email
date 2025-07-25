@@ -26,3 +26,29 @@ Este projeto automatiza o envio de e-mails personalizados utilizando uma planilh
 - requirements.txt
 
 ## Como usar
+### 1.Clone o repositório
+
+```bash
+git clone https://github.com/seuusuario/seu-repo.git
+cd seu-repo
+
+### 2. Instale as dependências
+- Certifique-se de estar usando o Python 3. Depois, execute:
+
+pip install -r requirements.txt
+
+### 3.Prepare sua planilha
+Crie ou edite um arquivo .ods contendo, no mínimo, as colunas
+ - Nome --> Nome do destinatário (para saudação personalizada)
+ - Email ---> E-mail para o qual a mensagem será enviada
+
+## 4. Configure as credenciais de e-mail
+Este projeto utiliza autenticação via senha de aplicativo(exigida pelo Gmail).
+Você deve exportar a senha como variável de ambiente ou editá-la diretamente no script(não recomendado )
+
+- Usando variáveis de ambiente (recomendado):
+ No Windows (CMD)
+ set Senha_email = sua_senha_de_app
+
+- Editar diretamente no enviar_emails.py:
+    senha = 'sua_senha_de_app'
